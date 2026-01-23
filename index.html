@@ -1,133 +1,607 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="LZkdkNZY1i6SlW7JW_pQOT88L5xHkE6cV5fRLBWFwdw" />
-  <title>FixitHome.ae — A Complete Home Renovation & Maintenance Partner in Dubai</title>
-  <meta name="description" content="FixitHome.ae provides full home renovation,custom carpentry, electrical & plumbing, painting, and bespoke interior projects across Dubai and the UAE. Learn why Fixit Home is the right partner for your next renovation.">
-  <meta name="author" content="Fixit Home">
-  <link rel="canonical" href="https://fixithome.ae/">
-  <style>
-    :root{--bg:#f7f9fb;--card:#ffffff;--accent:#0b72ff;--muted:#6b7280;--maxw:900px}
-    *{box-sizing:border-box}
-    body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6;margin:0;background:var(--bg);color:#0f172a}
-    .wrap{max-width:var(--maxw);margin:48px auto;padding:24px}
-    .card{background:var(--card);border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,0.06);padding:28px}
-    header h1{font-size:clamp(20px,3vw,28px);margin:0 0 8px}
-    header p.lead{color:var(--muted);margin:0 0 18px}
-    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
-    .badge{background:#eef2ff;color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
-    h2{margin-top:22px;margin-bottom:8px}
-    h3{margin-top:16px;margin-bottom:6px;font-size:15px}
-    ul{margin:8px 0 16px 20px}
-    a{color:var(--accent);text-decoration:none}
-    footer{margin-top:22px;padding-top:18px;border-top:1px solid #eef2f5;color:var(--muted);font-size:14px}
-    .contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
-    @media (max-width:640px){.wrap{margin:18px;padding:16px}.card{padding:18px}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design & Fit Out Company in Dubai | Fixit Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #3D5744;
+            --secondary-color: #8A441C;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(61, 87, 68, 0.95), rgba(138, 68, 28, 0.95)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt3rrC3Ev6w57coyu25k17NPXyc6mofL4L7g&s');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--primary-color);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .content-section a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .content-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .contact-item span:first-child {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Backlinks */
+        .backlinks {
+            background: white;
+            padding: 2rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .backlinks-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .backlinks a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.5rem;
+            transition: color 0.3s;
+            text-align: center;
+        }
+
+        .backlinks a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main class="wrap">
-    <article class="card">
-      <header>
-        <div class="meta">
-          <span class="badge">Renovation</span>
-          <span class="badge">Dubai</span>
-          <span style="color:var(--muted);font-size:13px">Updated: 2025</span>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://fixithome.ae/wp-content/uploads/2025/11/fixit-home-logo.svg" alt="Fixit Home Logo">
+            </div>
+            <nav>
+                <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <h1>FixitHome.ae — A Complete Home Renovation & Maintenance Partner in Dubai</h1>
-        <p class="lead">Fixit Home delivers professional renovation,<a href="https://fixithome.ae/services/carpentry/"> custom carpentry,</a> electrical & plumbing, painting, and bespoke interior services across Dubai and the UAE. Ideal for homeowners and businesses seeking high-quality, tailored solutions.</p>
-      </header>
+    </header>
 
-      <section>
-        <h2>About Fixit Home</h2>
-        <p>Based in <strong>Al Quoz 1, Dubai</strong>, Fixit Home specializes in bespoke renovation projects. Their mission is to transform homes with practical, stylish, and long-lasting designs that match each customer's lifestyle and requirements. Fixit Home focuses on custom renovation — every project is tailored based on size, budget, and design preferences.</p>
-      </section>
-
-      <section>
-        <h2>Services Offered</h2>
-        <h3>Full Home Renovation</h3>
-        <p>Complete apartment and villa renovation solutions, including:</p>
-        <ul>
-          <li><a href="https://fixithome.ae/renovation/kitchen/">Kitchen remodeling</a>
-          <li><a href="https://fixithome.ae/renovation/bathroom/">Bathroom renovation</a>
-          <li>Living room redesign</li>
-          <li>Bedroom improvements</li>
-          <li>Flooring, tiling & wall finishing</li>
-        </ul>
-
-        <h3>Carpentry & Custom Woodwork</h3>
-        <ul>
-          <li>Kitchen cabinets & wardrobes</li>
-          <li>Custom shelves, TV units, and storage solutions</li>
-          <li>Repairs & refinishing</li>
-        </ul>
-
-        <h3>Electrical & Plumbing</h3>
-        <ul>
-          <li>Lighting installation & electrical upgrades</li>
-          <li>Water heater installation & plumbing repairs</li>
-          <li>Full plumbing maintenance</li>
-        </ul>
-
-        <h3>Painting & Wall Finishes</h3>
-        <ul>
-          <li>Interior & exterior painting</li>
-          <li>Decorative finishes & wallpaper</li>
-          <li>Tile installation and feature walls</li>
-        </ul>
-
-        <h3>Bespoke Interior Projects</h3>
-        <p>Custom interior solutions such as smart layout planning, space optimization, design consultations, mood boards, and material recommendations.</p>
-      </section>
-
-      <section>
-        <h2>Why Choose FixitHome.ae?</h2>
-        <ul>
-          <li><strong>Skilled & professional team:</strong> Experienced designers, carpenters, and technicians.</li>
-          <li><strong>Fully customizable solutions:</strong> Tailored to your budget, taste, and space.</li>
-          <li><strong>High-quality materials:</strong> Durable and premium-grade finishes.</li>
-          <li><strong>Reliable & transparent:</strong> Clear communication and honest pricing.</li>
-          <li><strong>Local expertise:</strong> Knowledge of Dubai building rules and design trends.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Popular Projects</h2>
-        <ul>
-          <li><strong>Kitchen renovation:</strong> Cabinets, countertops, lighting, and functionality upgrades.</li>
-          <li><strong>Bathroom upgrade:</strong> New tiles, showers, vanities, and plumbing fittings.</li>
-          <li><strong>Bedroom makeovers:</strong> Custom wardrobes, shelving, and paint themes.</li>
-          <li><strong>Living room enhancements:</strong> Feature walls, TV units, and lighting upgrades.</li>
-          <li><strong>Office fit-outs:</strong> Functional, stylish designs for home offices and small businesses.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>SEO & Backlink Friendly Use</h2>
-        <p>This article structure and content are suitable for blogs, guest posts, business directories, and backlink sites. Recommendations:</p>
-        <ul>
-          <li>Include a local keyword phrase such as <em>"Dubai renovation"</em> or <em>"Home renovation UAE"</em> in the article's anchor text when linking back.</li>
-          <li>Host the article on reputable blogs or directories to increase domain authority.</li>
-        </ul>
-      </section>
-
-      <footer>
-        <strong>Contact & Next Steps</strong>
-        <div class="contact">
-          <a class="btn" href="https://fixithome.ae/">Visit FixitHome.ae</a>
-          <a href="tel:+971567555833">Call: +971 56 755 5833</a>
-          <a href="mailto:info@fixithome.ae">Email: info@fixithome.ae</a>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Interior Design & Fit Out Company in Dubai | Fixit Home</h1>
+            <p>Dubai is a city where interiors are more than just functional spaces; they are a reflection of lifestyle, ambition, and taste.</p>
+            <button class="cta-button" onclick="location.href='#contact'">Contact Us Today</button>
         </div>
-        <p style="margin-top:10px">Use this HTML as a ready-to-publish page or as a guest-post submission. Feel free to edit links, images, or add case studies and testimonials for more credibility.</p>
-      </footer>
-    </article>
-  </main>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <p>Dubai is a city where interiors are more than just functional spaces; they are a reflection of lifestyle, ambition, and taste. Homes, offices, retail outlets, and hospitality spaces all demand thoughtful design, premium materials, and flawless execution. This is where Fixit Home stands out as a trusted <a href="https://fixithome.ae/">interior decor company</a> in Dubai, offering complete interior services under one roof. With a focus on quality craftsmanship, tailored solutions, and professional installation, Fixit Home helps clients transform ordinary spaces into inspiring environments that feel personal, practical, and built to last.</p>
+        </div>
+    </section>
+
+    <!-- One-Stop Solution -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">A One-Stop Interior Solutions Partner in Dubai</h2>
+            <p>Finding reliable interior services in Dubai can be challenging, especially when projects involve multiple elements like flooring, curtains, blinds, wall panels, and renovations. Fixit Home simplifies the process by providing end-to-end interior solutions for residential and commercial clients. From the first consultation to final handover, every detail is managed by experienced professionals who understand local standards, building requirements, and client expectations. Whether it is a single-room upgrade or a complete fit out, the approach remains consistent: listen carefully, design intelligently, and deliver on time.</p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="content-section" id="services">
+        <div class="container">
+            <h2 class="section-title">Custom Curtains Designed for Dubai Living</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://fixithome.ae/wp-content/uploads/2025/12/custom-curtains-dubai.webp" alt="Custom Curtains Dubai">
+                    <h3>Custom Curtains</h3>
+                    <p>Curtains do more than frame windows; they control light, enhance privacy, and define the mood of a room. Fixit Home specializes in <a href="https://fixithome.ae/curtains/">curtains dubai</a>, offering a wide range of fabrics, styles, and finishes suited to modern apartments, luxury villas, and commercial spaces. From sheer curtains that soften daylight to blackout curtains ideal for bedrooms and media rooms, each solution is tailored to the client's lifestyle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flooring -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Flooring Solutions That Combine Style and Durability</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://fixithome.ae/wp-content/uploads/2025/07/image-2025-07-04T112518.932.webp" alt="Flooring Dubai">
+                    <h3>Flooring Installation</h3>
+                    <p>Flooring plays a major role in how a space looks and feels. As specialists in <a href="https://fixithome.ae/flooring/">flooring dubai</a>, Fixit Home offers options that balance aesthetics, durability, and easy maintenance. Clients can choose from hardwood flooring, laminate, vinyl, SPC, tiles, and carpet flooring, all sourced from trusted manufacturers. Each flooring type is recommended based on usage, foot traffic, and design preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Renovation -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Complete Home Renovation Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://fixithome.ae/wp-content/uploads/2025/07/Emirates-Hills-Villa-Renovate.png" alt="Home Renovation Dubai">
+                    <h3>Home Renovation</h3>
+                    <p>Home renovation is a significant investment, and it requires careful planning and experienced execution. Fixit Home is recognized among <a href="https://fixithome.ae/renovation/">home renovation dubai</a> experts for delivering structured, transparent, and stress-free renovation experiences. Services include kitchen remodeling, bathroom upgrades, living room transformations, bedroom redesigns, and full home renovations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wallpapers -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Wallpapers That Add Character and Depth</h2>
+            <p>Wallpapers are an effective way to introduce texture, pattern, and personality into interiors. Fixit Home offers a curated collection of wallpapers suitable for contemporary, classic, and luxury themes. From subtle textures to bold feature walls, wallpaper solutions are customized to suit the space and lighting conditions. Professional installation ensures seamless alignment and a refined finish, making wallpapers a practical alternative to traditional paint for clients seeking distinctive interiors in Dubai.</p>
+        </div>
+    </section>
+
+    <!-- Carpets -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Carpets and Rugs for Comfort and Elegance</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://fixitdubai.ae/wp-content/uploads/2025/11/Best-wall-to-wall-carpeting.jpg" alt="Carpets Dubai">
+                    <h3>Carpets & Rugs</h3>
+                    <p>Carpets and rugs bring warmth, acoustic comfort, and visual balance to interiors. Fixit Home supplies and installs high-quality <a href="https://fixithome.ae/carpet/">carpets dubai</a> for homes, offices, hotels, and commercial spaces. Options range from wall-to-wall carpeting to custom area rugs designed to fit specific layouts. Materials are selected for durability, stain resistance, and comfort, ensuring long-term satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blinds -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Blinds That Balance Light and Privacy</h2>
+            <p>Blinds are a popular choice for modern interiors due to their clean lines and functional control. Fixit Home provides blinds installation Dubai services, offering roller blinds, vertical blinds, Roman blinds, Venetian blinds, and motorized options. Each solution is tailored to window size, orientation, and user preference. With precise fitting and quality mechanisms, blinds provide effective light management, privacy, and energy efficiency for both residential and commercial properties.</p>
+        </div>
+    </section>
+
+    <!-- Custom Mats -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Custom Mats for Branding and Safety</h2>
+            <p>Custom mats are often overlooked, yet they play an important role in cleanliness, safety, and branding. Fixit Home designs and supplies custom mats in Dubai for entrances, lobbies, offices, and retail spaces. Options include logo mats, entrance mats, anti-slip mats, and outdoor mats built to withstand heavy foot traffic. These mats not only protect flooring but also create a professional first impression, especially for businesses seeking consistency in their interior branding.</p>
+        </div>
+    </section>
+
+    <!-- Wall Panels -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Wall Panels for Modern and Luxury Interiors</h2>
+            <p>Wall panels are a stylish way to enhance interiors while adding texture and depth. Fixit Home offers a range of wall panels in Dubai, including wooden panels, MDF panels, PVC panels, and acoustic panels. These solutions are ideal for feature walls, TV units, offices, and commercial interiors. Custom designs ensure the panels align with the overall design concept, while expert installation guarantees durability and visual appeal.</p>
+        </div>
+    </section>
+
+    <!-- Professional Installation -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Professional Fit Out and Installation Services</h2>
+            <p>Even the best materials cannot deliver results without proper installation. Fixit Home's professional installation services are handled by trained technicians who follow industry best practices and local regulations. Every project is managed with attention to detail, safety standards, and timelines. From flooring installation to curtain fixing and full fit out execution, clients benefit from a coordinated approach that minimizes disruption and ensures consistent quality across all services.</p>
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="content-section" id="about">
+        <div class="container">
+            <h2 class="section-title">Why Clients Choose Fixit Home</h2>
+            <p>Fixit Home has built its reputation as a dependable interior design and fit out company in Dubai by focusing on client satisfaction. Key advantages include transparent pricing, clear communication, customized solutions, and reliable after-sales support. The team works closely with clients to understand their vision and translate it into practical designs that suit both lifestyle and budget. On-time delivery and quality assurance remain central to every project, regardless of size or complexity.</p>
+        </div>
+    </section>
+
+    <!-- Quality Materials -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Quality Materials and Trusted Suppliers</h2>
+            <p>Quality is never compromised at Fixit Home. Materials are sourced from reputable suppliers known for durability, safety, and design excellence. Whether it is flooring, fabrics, wallpapers, or wall panels, each product is selected to meet Dubai's climate conditions and usage demands. This commitment to quality ensures interiors that look good today and perform well for years to come.</p>
+        </div>
+    </section>
+
+    <!-- Serving Clients -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Serving Residential and Commercial Clients Across Dubai</h2>
+            <p>Fixit Home caters to a diverse range of clients, including homeowners, landlords, property managers, offices, retail outlets, and hospitality businesses. Understanding the unique requirements of each sector allows the team to deliver solutions that are both functional and visually appealing. From modern apartments in the city to large commercial fit out projects, Fixit Home adapts its expertise to suit every environment.</p>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">A Thoughtful Design and Execution Process</h2>
+            <p>Every successful interior project starts with a clear process. Fixit Home follows a structured approach that includes consultation, site assessment, design planning, material selection, installation, and final inspection. Clients are kept informed at every stage, ensuring transparency and confidence throughout the journey. This organized workflow helps avoid delays and ensures that the final outcome matches the original vision.</p>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Conclusion: Transform Your Space with Fixit Home</h2>
+            <p>Choosing the right interior partner makes all the difference in achieving a space that feels complete, comfortable, and inspiring. As a leading interior design and fit out company in Dubai, Fixit Home combines creative design, quality materials, and expert workmanship to deliver results that exceed expectations. Whether you need custom curtains, flooring installation, blinds, wallpapers, carpets, wall panels, or full home renovation services, Fixit Home is ready to help you transform your space with confidence.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Fixit Home</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">To start your interior project or request a consultation, contact Fixit Home today.</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>+971567555833</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <span>info@fixithome.ae</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>3B St Al Quoz 1 Dubai, UAE</span>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.7445678901234!2d55.2395753748688!3d25.14949324709553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA4JzU4LjIiTiA1NcKwMTQnMjIuNSJF!5e0!3m2!1sen!2sae!4v1234567890123!5m2!1sen!2sae" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Backlinks -->
+    <section class="backlinks">
+        <div class="backlinks-grid">
+            <a href="https://embed.figma.com/exit?url=https://fixithome.ae/" target="_blank" rel="noopener">Figma Design</a>
+            <a href="https://docs.google.com/document/d/e/2PACX-1vTEUG_k60XMzIPohHCecsUCUZRf3bEVJ3BwuLIp1MUMKj4qlheRlZojybgmjTvSFFDFBOISbwLVCo8d/pub" target="_blank" rel="noopener">Documentation</a>
+            <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSEKNE6FiTwLGxoLbOtluy-gT9cPv8Y-YyaUnqj9h9xCUYzOYnuaAmAtrVa2ROzxbhAAqpVkm6u8j5V/pubhtml" target="_blank" rel="noopener">Services Sheet</a>
+            <a href="https://docs.google.com/presentation/d/e/2PACX-1vSPvMshrA3nXHBUaRr4OQrvbF6Mcjn7Knbgc9XWkPvTJxrkOvR4k8SwxuWskTmju__l3ab4s8xecpt4/pub?start=false&loop=false&delayms=3000" target="_blank" rel="noopener">Presentation</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeoQZ1aKZsDj4n9LUlgH70aEAqk_IUrtTp6VzD2nnmaX4oUyw/viewform?usp=header" target="_blank" rel="noopener">Contact Form</a>
+            <a href="https://www.google.com/maps/d/u/0/edit?mid=1Zixtu1VT1ZKXCj04Kpb3rVYLVbRd2_I&ll=25.14949324709553%2C55.2395753748688&z=17" target="_blank" rel="noopener">Location Map</a>
+            <a href="https://docs.google.com/videos/d/1a--CBfgJgAbYBKlFuMHbI7Hb6h2MGj9SPRxUoP9XVEk/edit?scene=id.p#scene=id.p" target="_blank" rel="noopener">Video Tour</a>
+            <a href="https://docs.google.com/drawings/d/e/2PACX-1vRgbgLnC-xEI41a2Ibo-nakAzUrcvCuTlIMOa3TdN4sbtkBPWkajXBFIlRIzlQKF6SF0QGL5EpqFSdy/pub?w=960&h=720" target="_blank" rel="noopener">Drawings</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Fixit Home</h3>
+                <p>Leading interior design and fit out company in Dubai, offering complete interior solutions under one roof.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="https://fixithome.ae/">Home</a>
+                <a href="https://fixithome.ae/renovation/">Renovation</a>
+                <a href="https://fixithome.ae/carpet/">Carpets</a>
+                <a href="https://fixithome.ae/curtains/">Curtains</a>
+                <a href="https://fixithome.ae/flooring/">Flooring</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📞 +971567555833</p>
+                <p>✉️ info@fixithome.ae</p>
+                <p>📍 3B St Al Quoz 1 Dubai, UAE</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Fixit Home. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
-<a href="https://fixithome.ae/renovation/bathroom/">Bathroom renovation</a>
-
-
